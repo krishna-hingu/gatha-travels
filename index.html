@@ -161,34 +161,8 @@
     <section id="about" class="bg-white scroll-mt-24">
       <div class="max-w-7xl mx-auto px-6 py-10 md:py-22">
         <div class="grid md:grid-cols-2 gap-12 items-center">
-          <!-- Image -->
-
-          <div
-            class="relative w-full aspect-[16/9] md:h-[400px] overflow-hidden rounded-xl shadow-lg bg-gray-100"
-          >
-            <img
-              src="./images/night-life.jpeg"
-              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-100 transition-opacity duration-1000"
-            />
-
-            <img
-              src="./images/mumbai-darshan.jpg"
-              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
-            />
-
-            <img
-              src="./images/airport-pickup.jpeg"
-              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
-            />
-
-            <img
-              src="./images/corporate-pickup.jpg"
-              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
-            />
-          </div>
-
-          <!-- Text Content -->
-          <div>
+          <!-- Text Content (FIRST on mobile) -->
+          <div class="order-1 md:order-2">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
               About Gatha Travels
             </h2>
@@ -210,6 +184,31 @@
               Our aim is simple — to make travel safe, comfortable, and
               convenient for every customer.
             </p>
+          </div>
+
+          <!-- Image Slider (BELOW text on mobile) -->
+          <div
+            class="order-2 md:order-1 relative w-full aspect-[16/9] md:h-[400px] overflow-hidden rounded-xl shadow-lg bg-gray-100"
+          >
+            <img
+              src="./images/night-life.jpeg"
+              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-100 transition-opacity duration-1000"
+            />
+
+            <img
+              src="./images/mumbai-darshan.jpg"
+              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
+            />
+
+            <img
+              src="./images/airport-pickup.jpeg"
+              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
+            />
+
+            <img
+              src="./images/corporate-pickup.jpg"
+              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
+            />
           </div>
         </div>
       </div>
