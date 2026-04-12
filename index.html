@@ -16,8 +16,12 @@
       >
         <!-- Logo -->
         <div id="logo">
-          <a href="#hero" class="text-2xl font-bold text-blue-600">
-            Gatha Travels
+          <a href="#hero" class="flex items-center">
+            <img
+              src="./images/gatha-logo-2.jpg"
+              alt="Gatha Travels Logo"
+              class="h-12 md:h-14 lg:h-14 object-contain block"
+            />
           </a>
         </div>
 
@@ -76,7 +80,7 @@
           <div>
             <!-- Tagline -->
             <p class="text-blue-600 font-semibold uppercase tracking-wide">
-              Safe • Reliable • Divine
+              Aapki Yatra Humari Gatha
             </p>
 
             <!-- Heading -->
@@ -120,36 +124,36 @@
           <div>
             <!-- Right Image Slider -->
             <div
-              class="relative w-full aspect-[16/9] md:h-[400px] overflow-hidden rounded-xl shadow-lg bg-gray-100"
+              class="relative w-full h-[250px] sm:h-[300px] md:h-[320px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg bg-gray-100"
             >
               <img
                 src="./images/wagon-r.jpg"
-                class="hero-slide absolute w-full h-full object-contain md:object-cover opacity-100 transition-opacity duration-1000"
+                class="hero-slide absolute w-full h-full object-contain object-center opacity-100 transition-opacity duration-1000"
               />
 
               <img
                 src="./images/swift-dzire.jpg"
-                class="hero-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
+                class="hero-slide absolute w-full h-full object-contain object-center opacity-0 transition-opacity duration-1000"
               />
 
               <img
                 src="./images/ertiga.jpg"
-                class="hero-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
+                class="hero-slide absolute w-full h-full object-contain object-center opacity-0 transition-opacity duration-1000"
               />
 
               <img
                 src="./images/toyota-innova.jpg"
-                class="hero-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
+                class="hero-slide absolute w-full h-full object-contain object-center opacity-0 transition-opacity duration-1000"
               />
 
               <img
                 src="./images/innova_crysta-1.jpg"
-                class="hero-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
+                class="hero-slide absolute w-full h-full object-contain object-center opacity-0 transition-opacity duration-1000"
               />
 
               <img
                 src="./images/Tempo-Traveller-4020-Super-20-seater.jpg"
-                class="hero-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
+                class="hero-slide absolute w-full h-full object-contain object-center opacity-0 transition-opacity duration-1000"
               />
             </div>
           </div>
@@ -188,26 +192,30 @@
 
           <!-- Image Slider (BELOW text on mobile) -->
           <div
-            class="order-2 md:order-1 relative w-full aspect-[16/9] md:h-[400px] overflow-hidden rounded-xl shadow-lg bg-gray-100"
+            class="order-2 md:order-1 relative w-full h-[250px] sm:h-[300px] md:h-[320px] lg:h-[400px] overflow-hidden rounded-xl shadow-lg bg-gray-100"
           >
             <img
+              src="./images/tejas-image.jpeg"
+              class="about-slide absolute w-full h-full object-contain md:object-cover object-center opacity-100 transition-opacity duration-1000"
+            />
+            <img
               src="./images/night-life.jpeg"
-              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-100 transition-opacity duration-1000"
+              class="about-slide absolute w-full h-full object-contain md:object-cover object-center opacity-0 transition-opacity duration-1000"
             />
 
             <img
               src="./images/mumbai-darshan.jpg"
-              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
+              class="about-slide absolute w-full h-full object-contain md:object-contain object-center opacity-0 transition-opacity duration-1000"
             />
 
             <img
               src="./images/airport-pickup.jpeg"
-              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
+              class="about-slide absolute w-full h-full object-contain md:object-cover object-center opacity-0 transition-opacity duration-1000"
             />
 
             <img
               src="./images/corporate-pickup.jpg"
-              class="about-slide absolute w-full h-full object-contain md:object-cover opacity-0 transition-opacity duration-1000"
+              class="about-slide absolute w-full h-full object-contain md:object-cover object-center opacity-0 transition-opacity duration-1000"
             />
           </div>
         </div>
@@ -424,7 +432,9 @@
             experience.
           </p>
         </div>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
+        >
           <!-- WagonR -->
           <div
             class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
@@ -500,7 +510,26 @@
             </div>
           </div>
 
-          <!-- Tempo Traveller -->
+          <!-- Mini Bus -->
+          <div
+            class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+          >
+            <img
+              src="./images/mini-bus.png"
+              class="w-full h-48 sm:h-52 md:h-56 object-cover"
+            />
+            <div class="p-5">
+              <h3 class="text-xl font-semibold">Mini Bus</h3>
+              <p class="text-gray-600 text-sm mt-1">
+                10–15 Seater • Group Travel
+              </p>
+              <p class="text-gray-500 mt-3">
+                Ideal for small group trips and events
+              </p>
+            </div>
+          </div>
+
+          <!-- Force Traveler -->
           <div
             class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
           >
@@ -509,9 +538,32 @@
               class="w-full h-48 sm:h-52 md:h-56 object-cover"
             />
             <div class="p-5">
-              <h3 class="text-xl font-semibold">Tempo Traveller</h3>
-              <p class="text-gray-600 text-sm mt-1">20 Seater • Group Travel</p>
-              <p class="text-gray-500 mt-3">Best for tours & events</p>
+              <h3 class="text-xl font-semibold">Force Traveller</h3>
+              <p class="text-gray-600 text-sm mt-1">
+                20–25 Seater • Group Travel
+              </p>
+              <p class="text-gray-500 mt-3">
+                Perfect for tours, weddings & large groups
+              </p>
+            </div>
+          </div>
+
+          <!-- bus -->
+          <div
+            class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+          >
+            <img
+              src="./images/bus.png"
+              class="w-full h-48 sm:h-52 md:h-56 object-cover"
+            />
+            <div class="p-5">
+              <h3 class="text-xl font-semibold">Bus</h3>
+              <p class="text-gray-600 text-sm mt-1">
+                30–50 Seater • Large Group Travel
+              </p>
+              <p class="text-gray-500 mt-3">
+                Best for corporate trips, school tours & events
+              </p>
             </div>
           </div>
         </div>
@@ -742,7 +794,7 @@
                 </svg>
               </div>
 
-              <span class="text-gray-700 font-medium"> +91 85915 09146 </span>
+              <span class="text-gray-700 font-medium"> +91 85915 09146 / +91 86573 09146</span>
             </div>
 
             <!-- WhatsApp -->
@@ -795,7 +847,7 @@
               </div>
 
               <span class="text-gray-700 font-medium">
-                info@gathatravels.com
+                travelsgatha@gmail.com
               </span>
             </div>
           </div>
@@ -905,7 +957,7 @@
               <li>
                 📞
                 <a href="tel:+918591509146" class="hover:text-white transition">
-                  +91 85915 09146
+                  +91 85915 09146 / +91 86573 09146
                 </a>
               </li>
 
@@ -945,10 +997,10 @@
               <li>
                 ✉️
                 <a
-                  href="mailto:info@gathatravels.com"
+                  href="mailto:travelsgatha@gmail.com"
                   class="hover:text-white transition"
                 >
-                  info@gathatravels.com
+                  travelsgatha@gmail.com
                 </a>
               </li>
             </ul>

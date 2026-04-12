@@ -659,10 +659,6 @@ video {
   display: none;
 }
 
-.aspect-\[16\/9\] {
-  aspect-ratio: 16/9;
-}
-
 .h-10 {
   height: 2.5rem;
 }
@@ -683,8 +679,16 @@ video {
   height: 1.5rem;
 }
 
+.h-\[250px\] {
+  height: 250px;
+}
+
 .h-full {
   height: 100%;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .w-10 {
@@ -707,8 +711,36 @@ video {
   width: 100%;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
+.min-w-\[120px\] {
+  min-width: 120px;
+}
+
+.max-w-32 {
+  max-width: 8rem;
+}
+
 .max-w-7xl {
   max-width: 80rem;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-150 {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @keyframes bounce {
@@ -737,6 +769,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .items-start {
@@ -867,6 +903,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -875,6 +916,11 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-5 {
@@ -1132,6 +1178,14 @@ video {
   .sm\:h-52 {
     height: 13rem;
   }
+
+  .sm\:h-\[300px\] {
+    height: 300px;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 768px) {
@@ -1159,8 +1213,32 @@ video {
     height: 14rem;
   }
 
-  .md\:h-\[400px\] {
-    height: 400px;
+  .md\:h-\[320px\] {
+    height: 320px;
+  }
+
+  .md\:h-12 {
+    height: 3rem;
+  }
+
+  .md\:h-14 {
+    height: 3.5rem;
+  }
+
+  .md\:h-10 {
+    height: 2.5rem;
+  }
+
+  .md\:w-40 {
+    width: 10rem;
+  }
+
+  .md\:min-w-\[150px\] {
+    min-width: 150px;
+  }
+
+  .md\:max-w-40 {
+    max-width: 10rem;
   }
 
   .md\:grid-cols-2 {
@@ -1169,6 +1247,11 @@ video {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:object-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .md\:object-cover {
@@ -1188,7 +1271,57 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:h-\[400px\] {
+    height: 400px;
+  }
+
+  .lg\:h-14 {
+    height: 3.5rem;
+  }
+
+  .lg\:h-16 {
+    height: 4rem;
+  }
+
+  .lg\:h-12 {
+    height: 3rem;
+  }
+
+  .lg\:h-1 {
+    height: 0.25rem;
+  }
+
+  .lg\:w-48 {
+    width: 12rem;
+  }
+
+  .lg\:max-w-48 {
+    max-width: 12rem;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
