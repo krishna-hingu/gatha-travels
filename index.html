@@ -37,7 +37,9 @@
 
           <a href="#fleet" class="hover:text-orange-500 transition">Fleet</a>
 
-          <a href="#contact" class="hover:text-orange-500 transition">Contact</a>
+          <a href="#contact" class="hover:text-orange-500 transition"
+            >Contact</a
+          >
         </nav>
 
         <!-- Mobile Menu Button -->
@@ -57,7 +59,9 @@
           >About</a
         >
 
-        <a href="#services" class="block py-2 text-gray-700 hover:text-orange-500"
+        <a
+          href="#services"
+          class="block py-2 text-gray-700 hover:text-orange-500"
           >Services</a
         >
 
@@ -65,7 +69,9 @@
           >Fleet</a
         >
 
-        <a href="#contact" class="block py-2 text-gray-700 hover:text-orange-500"
+        <a
+          href="#contact"
+          class="block py-2 text-gray-700 hover:text-orange-500"
           >Contact</a
         >
       </div>
@@ -196,7 +202,7 @@
           >
             <img
               src="./images/tejas-image.jpeg"
-              class="about-slide absolute w-full h-full object-contain md:object-cover object-center opacity-100 transition-opacity duration-1000"
+              class="about-slide absolute w-full h-full object-cover md:object-cover object-center opacity-100 transition-opacity duration-1000"
             />
             <img
               src="./images/night-life.jpeg"
@@ -432,9 +438,7 @@
             experience.
           </p>
         </div>
-        <div
-          class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
-        >
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           <!-- WagonR -->
           <div
             class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
@@ -753,20 +757,18 @@
 
     <section id="contact" class="bg-white scroll-mt-24">
       <div class="max-w-7xl mx-auto px-6 py-10 md:py-22">
-        <!-- Section Heading -->
+        <!-- Heading -->
         <div class="text-center mb-14">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-            Contact Us
+            Contact & Booking
           </h2>
-
           <p class="mt-4 text-gray-600">
-            For bookings and inquiries, feel free to contact us anytime.
+            Fill the form or contact us directly for quick cab booking.
           </p>
         </div>
 
-        <!-- Contact Grid -->
         <div class="grid md:grid-cols-2 gap-12 items-start">
-          <!-- Contact Information -->
+          <!-- LEFT: CONTACT INFO -->
           <div class="space-y-6">
             <h3 class="text-xl font-semibold text-gray-800">Gatha Travels</h3>
 
@@ -794,7 +796,9 @@
                 </svg>
               </div>
 
-              <span class="text-gray-700 font-medium"> +91 85915 09146 / +91 86573 09146</span>
+              <span class="text-gray-700 font-medium">
+                +91 85915 09146 / +91 86573 09146</span
+              >
             </div>
 
             <!-- WhatsApp -->
@@ -852,34 +856,117 @@
             </div>
           </div>
 
-          <!-- Quick Contact Buttons -->
+          <!-- RIGHT: FORM -->
           <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
-            <h3 class="text-xl font-semibold text-gray-800 mb-6">
-              Quick Booking
-            </h3>
+            <form id="booking-form" class="space-y-5">
+              <!-- Name + Phone -->
+              <div class="grid grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  placeholder="Full Name"
+                  class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-400 outline-none"
+                />
 
-            <p class="text-gray-600 mb-8">
-              Click the buttons below to quickly contact us for cab bookings.
-            </p>
+                <input
+                  type="tel"
+                  id="phone"
+                  required
+                  placeholder="Phone Number"
+                  class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-400 outline-none"
+                />
+              </div>
 
-            <div class="flex flex-col gap-4">
-              <!-- WhatsApp Button -->
-              <a
-                href="https://wa.me/918591509146"
-                target="_blank"
-                class="bg-green-500 text-white px-6 py-3 rounded-lg font-medium text-center hover:bg-green-600 transition"
+              <!-- Email -->
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder="Email Address"
+                class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-400 outline-none"
+              />
+
+              <!-- Trip + Vehicle -->
+              <div class="grid grid-cols-2 gap-4">
+                <select
+                  id="trip"
+                  required
+                  class="w-full px-4 py-3 border rounded-lg"
+                >
+                  <option value="">Trip Type</option>
+                  <option>Local</option>
+                  <option>Outstation</option>
+                  <option>Airport Pickup</option>
+                  <option>Airport Drop</option>
+                </select>
+
+                <select
+                  id="vehicle"
+                  required
+                  class="w-full px-4 py-3 border rounded-lg"
+                >
+                  <option value="">Vehicle</option>
+                  <option>WagonR</option>
+                  <option>Swift Dzire</option>
+                  <option>Ertiga</option>
+                  <option>Innova</option>
+                  <option>Innova Crysta</option>
+                  <option>Tempo Traveller</option>
+                  <option>Bus</option>
+                </select>
+              </div>
+
+              <!-- Pickup -->
+              <div>
+                <input
+                  type="text"
+                  id="pickup"
+                  required
+                  placeholder="Pickup Location"
+                  class="w-full px-4 py-3 border rounded-lg"
+                />
+
+                <button
+                  type="button"
+                  id="pickup-btn"
+                  class="mt-2 text-sm text-orange-500 hover:underline"
+                >
+                  📍 Use Current Location
+                </button>
+              </div>
+
+              <!-- Drop -->
+              <input
+                type="text"
+                id="drop"
+                required
+                placeholder="Drop Location (e.g. Airport, Pune)"
+                class="w-full px-4 py-3 border rounded-lg"
+              />
+
+              <!-- Date -->
+              <input
+                type="datetime-local"
+                id="datetime"
+                class="w-full px-4 py-3 border rounded-lg"
+              />
+
+              <!-- Submit -->
+              <button
+                type="submit"
+                class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition"
               >
                 Book on WhatsApp
-              </a>
+              </button>
 
-              <!-- Call Button -->
-              <a
-                href="tel:+918591509146"
-                class="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium text-center hover:bg-orange-600 transition"
+              <p
+                id="success-msg"
+                class="text-green-600 text-sm hidden text-center"
               >
-                Call Now
-              </a>
-            </div>
+                Redirecting to WhatsApp...
+              </p>
+            </form>
           </div>
         </div>
       </div>
@@ -907,7 +994,9 @@
 
             <ul class="space-y-3">
               <li>
-                <a href="#hero" class="hover:text-orange-400 transition"> Home </a>
+                <a href="#hero" class="hover:text-orange-400 transition">
+                  Home
+                </a>
               </li>
 
               <li>
@@ -956,7 +1045,10 @@
 
               <li>
                 📞
-                <a href="tel:+918591509146" class="hover:text-orange-400 transition">
+                <a
+                  href="tel:+918591509146"
+                  class="hover:text-orange-400 transition"
+                >
                   +91 85915 09146 / +91 86573 09146
                 </a>
               </li>
