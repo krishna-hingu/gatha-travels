@@ -54,13 +54,20 @@ setInterval(() => {
 const bookingForm = document.getElementById("booking-form");
 const successMsg = document.getElementById("success-msg");
 
-// set min date
+// date default + min
 const datetimeInput = document.getElementById("datetime");
+
 if (datetimeInput) {
-  datetimeInput.min = new Date().toISOString().slice(0, 16);
+  const now = new Date();
+  now.setMinutes(now.getMinutes() + 30);
+
+  const formatted = now.toISOString().slice(0, 16);
+
+  datetimeInput.value = formatted;
+  datetimeInput.min = formatted;
 }
 
-// pickup auto location
+// pickup location
 const pickupBtn = document.getElementById("pickup-btn");
 
 pickupBtn.addEventListener("click", () => {
@@ -70,12 +77,9 @@ pickupBtn.addEventListener("click", () => {
 
   navigator.geolocation.getCurrentPosition(
     async (pos) => {
-      const lat = pos.coords.latitude;
-      const lng = pos.coords.longitude;
-
       try {
         const res = await fetch(
-          `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`,
+          `https://nominatim.openstreetmap.org/reverse?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&format=json`,
         );
         const data = await res.json();
 
@@ -93,7 +97,7 @@ pickupBtn.addEventListener("click", () => {
   );
 });
 
-// reset pickup button if edited
+// reset pickup button
 document.getElementById("pickup").addEventListener("input", () => {
   pickupBtn.textContent = "📍 Use Current Location";
 });
@@ -123,6 +127,7 @@ bookingForm.addEventListener("submit", function (e) {
     });
   }
 
+  // ✅ Unicode-safe emojis
   const message =
     "*Gatha Travels Booking*\n\n" +
     "Name: " +
@@ -149,12 +154,12 @@ bookingForm.addEventListener("submit", function (e) {
     "Date & Time: " +
     formattedDateTime;
 
-  const whatsappURL = `https://wa.me/918591509146?text=${encodeURIComponent(message)}`;
+  const url = `https://wa.me/918591509146?text=${encodeURIComponent(message)}`;
 
   successMsg.classList.remove("hidden");
 
   setTimeout(() => {
-    window.open(whatsappURL, "_blank");
+    window.open(url, "_blank");
     bookingForm.reset();
     successMsg.classList.add("hidden");
   }, 800);
